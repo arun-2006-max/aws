@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Backend data (SQLite + ChromaDB)
+backend/data/
+backend/build/
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/build/
+
+# AWS CDK
+infrastructure/cdk.out/
+infrastructure/.cdk.staging/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# AWS credentials - NEVER commit!
+.aws/

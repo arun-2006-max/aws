@@ -1,0 +1,140 @@
+/* AI Builder Copilot – Global Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+/* ===== CSS Variables ===== */
+:root {
+  --primary: #667eea;
+  --primary-deep: #764ba2;
+  --accent-peach: #ffd3a5;
+  --accent-coral: #fd6585;
+  --accent-mint: #38ef7d;
+  --accent-blue: #a1c4fd;
+  --accent-lavender: #d299c2;
+  --bg-dark: #0a0a1a;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.07);
+  --text-primary: #e8e8f0;
+  --text-secondary: #999;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(15, 15, 30, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --gradient-brand: linear-gradient(135deg, var(--primary), var(--primary-deep));
+  --shadow-glow: 0 0 30px rgba(102, 126, 234, 0.15);
+}
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: rgba(102, 126, 234, 0.35);
+  color: #fff;
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--accent-blue);
+}
+
+/* ===== Code ===== */
+code, pre {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+code {
+  background: rgba(102, 126, 234, 0.12);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+/* ===== Glassmorphism Utility ===== */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+/* ===== Gradient Text ===== */
+.gradient-text {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
